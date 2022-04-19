@@ -1,0 +1,123 @@
+ public class bankbalance
+{
+    static int bal=1500;
+    static void credit(int amount)
+    {
+        bal=bal+amount;
+        System.out.println("transaction proccesing successful");
+    }
+    static void debit(int amount)
+    {
+        if(amount>bal)
+        {
+           System.out.println("in sufficiant balance");  
+           System.out.println("please try again");
+        }
+    
+      else
+      {
+        System.out.println("transaction proccesing successful");
+        bal=bal-amount;
+      } 
+    }
+      static void checkbalance()
+      {
+          System.out.println("account bal"+bal);
+      }
+       
+ 	    public static void main(String[] args)
+ 	  {
+ 	    int amount, op;
+ 	    string transaction;
+ 	    Scanner sc= new Scanner(System.in);
+		System.out.println("1.phone pay 2.google pay 3.amazon pay 4.upi");
+		do
+		{
+		   System.out.println("choose your option");
+		   transaction=sc.next();
+		 switch(transaction)
+		 {
+		     case 1 :  System.out.println("1.credit 2.debit 3.checkbalance");
+		                  do
+	                     	{
+		                     System.out.println("choose your option");
+		                      op=sc.nextInt();
+		                     switch(op)
+		                     {
+		                         case 1 : System.out.println("enter amount");
+		                                  amount= sc.nextInt();
+		                                  credit(amount);
+		                                  break;
+		                         case 2 :  System.out.println("enter amount");
+		                                   amount= sc.nextInt();
+		                                   debit(amount);
+		                                   break; 
+		                         case 3 :  checkbalance();
+		                                   break;
+		                                   default:System.out.println("nothing");
+		                     }
+	                     	}
+		 }
+		}
+		       case 2:     System.out.println("1.credit 2.debit 3.checkbalance");
+		                   do
+	                     	{
+		                     System.out.println("choose your option");
+		                      op=sc.nextInt();
+		                     switch(op)
+		                     {
+		                         case 1 : System.out.println("enter amount");
+		                                  amount= sc.nextInt();
+		                                  credit(amount);
+		                                  break;
+		                         case 2 :  System.out.println("enter amount");
+		                                   amount= sc.nextInt();
+		                                   debit(amount);
+		                                   break; 
+		                         case 3 :  checkbalance();
+		                                   break; 
+		                     }
+	                     	}
+		       case 3 :  System.out.println("1.credit 2.debit 3.checkbalance");
+		                  do
+	                     	{
+		                     System.out.println("choose your option");
+		                      op=sc.nextInt();
+		                     switch(op)
+		                     {
+		                         case 1 : System.out.println("enter amount");
+		                                  amount= sc.nextInt();
+		                                  credit(amount);
+		                                  break;
+		                         case 2 :  System.out.println("enter amount");
+		                                   amount= sc.nextInt();
+		                                   debit(amount);
+		                                   break; 
+		                         case 3 :  checkbalance();
+		                                   break; 
+		                     } 
+	                     	}
+		          case 4: System.out.println("1.credit 2.debit 3.checkbalance");
+		                  do
+	                     	{
+		                     System.out.println("choose your option");
+		                      op=sc.nextInt();
+		                     switch(op)
+		                     {
+		                         case 1 : System.out.println("enter amount");
+		                                  amount= sc.nextInt();
+		                                  credit(amount);
+		                                  break;
+		                         case 2 :  System.out.println("enter amount");
+		                                   amount= sc.nextInt();
+		                                   debit(amount);
+		                                   break; 
+		                         case 3 :  checkbalance();
+		                                   break;                         
+	                    	 }
+	                       	}
+		 
+		}
+		
+	}
+
